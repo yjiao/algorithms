@@ -1,0 +1,88 @@
+PROBLEM STATEMENT
+Elly's two little cousins are visiting her for the holidays.
+As you may know, children love candy, so Elly has bought several boxes of sweets for them.
+Each box contained an assorted collection of candy of different types.
+
+
+
+At some point Elly realized that giving each child some of the boxes is not a good idea:
+if they receive different candies, it will certainly cause a quarrel.
+Therefore, Elly decided to open all the boxes, take out all the sweets and distribute them evenly into two plastic bags.
+
+
+
+Of course, distributing a pile of assorted candies evenly may not always be possible.
+Sometimes it happens that the number of pieces of some particular type of candy is odd.
+In that case Elly will eat one of those sweets and only then will she distribute the rest of them evenly into the bags.
+
+
+
+You are given the vector <string> boxes.
+Each element of boxes describes the contents of one of the boxes Elly bought.
+Each character in each element of boxes represents one piece of candy.
+Equal characters are candies of the same type: e.g., all 'B's are identical bonbons and all 'L's are identical lollipops.
+
+
+
+Compute and return the number of candies each child will receive.
+
+DEFINITION
+Class:EllysCandyBags
+Method:getSize
+Parameters:vector <string>
+Returns:int
+Method signature:int getSize(vector <string> packets)
+
+
+CONSTRAINTS
+-boxes will contain between 1 and 50 elements, inclusive.
+-Each element of boxes will contain between 1 and 50 characters, inclusive.
+-Each character in boxes will be an uppercase letter of the English alphabet ('A'-'Z').
+
+
+EXAMPLES
+
+0)
+{"FOO", "BAR", "BAZ", "TOPCODER"}
+
+Returns: 5
+
+In this case Elly will eat the 7 candies that only occur once in the entire collection.
+The remaining 10 candies can be split evenly: each bag will contain two 'O's, one 'A', one 'B', and one 'R'.
+Thus, each child will receive 5 candies.
+
+1)
+{"X"}
+
+Returns: 0
+
+Elly will eat the only piece of candy. Then she will give each child an empty bag.
+
+2)
+{"GIVING", "CANDY", "TO", "CHILDREN", "CANNOT", "BE", "CHALLENGING", "RIGHT"}
+
+Returns: 17
+
+The candies in each bag here are: ACCDEGGHIILNNNORT
+
+3)
+{"WITHOUT", "IT", "IM", "JUST", "ESPR"}
+
+Returns: 5
+
+
+
+4)
+{"PHQGHUMEAYLNLFDXFIRCVSCXGGBWKFNQDUXWFNFOZVSRTKJPRE",
+ "PGGXRPNRVYSTMWCYSYYCQPEVIKEFFMZNIMKKASVWSRENZKYCXF",
+ "XTLSGYPSFADPOOEFXZBCOEJUVPVABOYGPOEYLFPBNPLJVRVIPY",
+ "AMYEHWQNQRQPMXUJJLOOVAOWUXWHMSNCBXCOKSFZKVATXDKNLY",
+ "JYHFIXJSWNKKUFNUXXZRZBMNMGQOOKETLYHNKOAUGZQRCDDIUT",
+ "EIOJWAYYZPVSCMPSAJLFVGUBFAAOVLZYLNTRKDCPWSRTESJWHD",
+ "IZCOBZCNFWLQIJTVDWVXHRCBLDVGYLWGBUSBMBORXTLHCSMPXO",
+ "HGMGNKEUFDXOTOGBGXPEYANFETCUKEPZSHKLJUGGGEKJDQZJEN",
+ "PEVQGXIEPJSRDZJAZUJL"}
+
+Returns: 203
+
+
